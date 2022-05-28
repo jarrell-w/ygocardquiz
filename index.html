@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <title>YGO Quiz</title>
+  </head>
+  <body>
+    <main>
+      <div class="bg"></div>
+      <header class="header">
+        <h1 id="site-title" class="color-white">
+          Welcome to the Yu-Gi-Oh! Card Quiz
+        </h1>
+        <p class="select-level color-white">Please select a level:</p>
+        <div>
+          <button class="select-easy">Play</button>
+
+          <!-- <button class="select-medium">Medium</button>
+            <button class="select-hard">Hard</button> -->
+        </div>
+        <br />
+        <br />
+      </header>
+      <section class="container">
+        <h2 class="game-results hidden color-white">Result:</h2>
+        <br />
+        <br />
+        <section class="game-section">
+          <div class="card-image-container">
+            <img
+              src="https://i.ibb.co/mv6001m/back-card-yugioh-hd-by-oricacardsbr-dbwk3sn-fullview.jpg"
+              alt="A picture of a Yu-Gi-Oh Card"
+              id="card-image"
+            />
+          </div>
+          <div class="panel-right">
+            <fieldset class="hidden">
+              <legend class="color-white">Submit your best guess!</legend>
+              <input
+                type="text"
+                name="input"
+                id="input"
+                autocomplete="off"
+                value=""
+              />
+              <button type="submit" id="submit">Submit</button>
+            </fieldset>
+
+            <div class="card-details color-white">
+              <h3 class="color-white">Can you guess that Yu-Gi-Oh! Card?</h3>
+              <h4 class="card-details-title color-white"></h4>
+              <div class="type-race">
+                <span class="card-race color-white"></span>
+                <span class="card-type color-white"></span>
+              </div>
+              <h5 class="card-name color-white"></h5>
+
+              <p class="card-desc color-white"></p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+body {
+  scroll-behavior: smooth;
+  text-align: center;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+main {
+  height: 100%;
+  padding: 10px;
+  background: url("https://i.ibb.co/nRXpNtt/giphy.gif") no-repeat center/cover;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.bg {
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Press Start 2P", cursive;
+}
+.hidden {
+  display: none;
+}
+#card-image {
+  max-width: 100%;
+  height: auto;
+}
+.card-image-container {
+  width: min(240px, 40%);
+}
+.color-white {
+  color: white;
+}
+.game-section {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.type-race {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+}
+.select-easy {
+  padding: 5px;
+  border-radius: 20%;
+  font-size: 1.1rem;
+  border-style: double;
+}
+.container {
+  font-size: 0.8rem;
+}
+.panel-right {
+  max-width: 60%;
+}
+@media (max-width: 700px) {
+  .game-section {
+    flex-wrap: wrap;
+  }
+  main {
+    height: 150%;
+  }
+}
