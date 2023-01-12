@@ -10,7 +10,7 @@ As a side project I decided to create a game based on one of my favourite franch
 
 **Tech used:** HTML, CSS, JavaScript
 
-The current iteration is only from the firsr set as the further in sets you get the more difficult it would be to guess the card. Due to not only the card name lengths but the equally as long descriptions. I called the YGOPro Api here: https://db.ygoprodeck.com/api-guide/ using ES7 async/await function. From there I using class encapsulation.
+The current iteration is only from the firsr set as the further in sets you get the more difficult it would be to guess the card. Due to not only the card name lengths but the equally as long descriptions. I called the YGOPro Api here: https://db.ygoprodeck.com/api-guide/ using ES6 async/await function. From there I using class encapsulation.
 
 ## Possible Optimizations
 
