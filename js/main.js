@@ -7,22 +7,21 @@ function getInput() {
 }
 async function startGame() {
   try {
-    let easyString = "Legend of Blue Eyes White Dragon";
     const response = await fetch(
-      `https://db.ygoprodeck.com/api/v7/cardinfo.php?cardset=${easyString}`
+      `https://db.ygoprodeck.com/api/v7/cardinfo.php`
     );
-    console.log(response.ok);
-    let json = {};
-    json = await response.json();
-    return json;
+    const data = await response.json();
+    //api structure testObject = { data: [{name: "george"}, {name: "bob"}, {name: "jim"}]}
+    //console.log(testObject)
+    return data;
   } catch (e) {
     console.error(e);
   }
 }
 
-async function showCard() {
-  const getData = await startGame();
-  const card = new cardInfo(getData.data);
+ async function showCard() {
+  const cards = await startGame();
+  const card = new cardInfo(cards.data);
   const backCardImage =
     "https://i.ibb.co/mv6001m/back-card-yugioh-hd-by-oricacardsbr-dbwk3sn-fullview.jpg";
   console.log(card.name);
@@ -55,9 +54,7 @@ async function showCard() {
 class cardInfo {
   constructor(data) {
     this.data = data;
-    this.randomCard = Math.ceil(
-      Math.random() * (data.length - Math.floor(data.length / 2))
-    );
+    this.randomCard = Math.floor(Math.random() * 9999);;
     this.desc = this.data[this.randomCard].desc;
     this.name = this.data[this.randomCard].name;
     this.race = this.data[this.randomCard].race;
@@ -65,3 +62,4 @@ class cardInfo {
     this.image = this.data[this.randomCard].card_images[0].image_url;
   }
 }
+
